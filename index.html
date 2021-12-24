@@ -9,5 +9,19 @@
 <body>
     <h1 id="demo">JavaScript can do HTML content.</h1>
     <button onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript'">Click me.</button>
+
+    <h2>JavaScript can do attribute value.</h2>
+    <p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
+    <button onclick="document.getElementById('bulb').src = 'images/pic_bulbon.gif'" >Turn on Bulb</button>
+    <img id="bulb" src="images/pic_bulboff.gif" alt="pic_bulboff">
+    <button onclick="document.getElementById('bulb').src = 'images/pic_bulboff.gif'">Turn off Bulb</button>
+
+    <p id="fontSize">JavaScript can change html font size</p>
+    <button onclick="document.getElementById('fontSize').style.fontSize = '35px'">change font size</button>
+
+    <p id="hide">JavaScript can hide HTML element</p>
+    <button onclick="document.getElementById('hide').style.display='none'">hide html element</button>
+    <button onclick="document.getElementById('hide').style.display='block'">show html element</button>
+
 </body>
 </html>
