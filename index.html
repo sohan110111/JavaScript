@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function myFunction() {
+            document.getElementById('scriptHead').innerHTML='The paragraph is changed';
+        }
+    </script>
     <title>Document</title>
 </head>
 <body>
@@ -22,6 +27,21 @@
     <p id="hide">JavaScript can hide HTML element</p>
     <button onclick="document.getElementById('hide').style.display='none'">hide html element</button>
     <button onclick="document.getElementById('hide').style.display='block'">show html element</button>
+
+    <p id="script"></p>
+    <script>
+        document.getElementById('script').innerHTML='My first JavaScript.';
+    </script>
+
+    <p id="scriptHead">A papragraph</p>
+    <button onclick="myFunction()">Try it.</button>
+
+   
+     
+    <p id="myScriptOther">Hello JavaScript</p>
+    <button onclick='myFunctionTwo()'>scrip file</button>
+    <script src="myScript.js">
+    </script>
 
 </body>
 </html>
