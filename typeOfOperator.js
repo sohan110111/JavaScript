@@ -11,3 +11,4 @@ console.log(concatanate_1);
 console.log(concatanate_2);
 console.log(typeof concatanate_1); // number
 console.log(typeof concatanate_2); // string : for priority of string
+document.getElementById("demo2").innerHTML = concatanate_1;
