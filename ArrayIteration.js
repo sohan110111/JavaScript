@@ -8,3 +8,11 @@ function myFunction(value, index, array) {
 }
 
 number.forEach(myFunction);
+
+// map
+function myFunction(value) {
+    return value*2;
+}
+
+const newNumber = number.map(myFunction);
+console.log(newNumber);
