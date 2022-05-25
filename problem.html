@@ -1,56 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <body>
     <script>
-    //print problem information
-    document.write(`<p>
-        A list of strings is given and each string will do following tasks:
-        x is an integer; enter a new x score.
-        "+" - Add the previous two scores together to create a new score. There will always be at least
-        two previous scores.
-        "D" - Make a new score that is twice as high as the previous one. There will almost certainly
-        be a previous score.
-        "R" - Remove the previous score from the record by invalidating it. There will almost certainly
-        be a previous score.
-        Return the total of all the records' scores.
-        Input: ops = ["7","-8","9","R","D","10","+","+"]
-        Output: -9
-        Explanation:
-        "7" - Increase the record by 7, making it [7].
-        "-8" - Increase the record by -8, making it [7, -8].
-        "9" - Increase the record by 9, making it [7, -8, 9].
-        "R" - Discard the previous score and replace it with [7, -8].
-        "D" - To the record, add 2* -8 = -16, making the record [7, -8, -16].
-        "10" - Increase the record by one, making it [7, -8, -16, 10].
-        "+" - Make the record [7, -8, -16, 10, -6 ] by adding -16 + 10 = -6.
-        "+" - Make the record [7, -8, -16, 10, -6, 4] by adding 10+ -6 = 4.
-        7 + -8 + -16 + 10 + -6 + 4 = -9 is the total.
-    </p>`)
-    var array = [];
-    var result = 0;
-    for (let i = 0; i < 8; i++) {
-        let String = prompt("Enter value : ");
-        //String * 1 for number convert
-        if (String*1 != NaN) {
-            array.push(parseInt(String));
-        } else if(String === 'R') {
-            array.pop();
-        } else if(String === 'D') {
-            array.push(array[array.length - 1] * 2);
-        } else if(String === '+') {
-            array.push(array[array.length - 1] + array[array.length - 2])
-        }
-    }
-    //Print array
-    document.write(`Fianal array Value : ${array}`);
-    console.log(array);
-    //sum of all elements
-    for (let index = 0; index < array.length; index++) {
-        result += array[index];
-    }
-    //sum print
-    document.write(`Total Value: ${result}`)
-    console.log(result)
+
+      document.write(`<p>
+          A list of strings is given and each string will do following tasks:
+          x is an integer; enter a new x score.
+          "+" - Add the previous two scores together to create a new score. There will always be at least
+          two previous scores.
+          "D" - Make a new score that is twice as high as the previous one. There will almost certainly
+          be a previous score.
+          "R" - Remove the previous score from the record by invalidating it. There will almost certainly
+          be a previous score.
+          Return the total of all the records' scores.
+          Input: ops = ["7","-8","9","R","D","10","+","+"]
+          Output: -9
+          Explanation:
+          "7" - Increase the record by 7, making it [7].
+          "-8" - Increase the record by -8, making it [7, -8].
+          "9" - Increase the record by 9, making it [7, -8, 9].
+          "R" - Discard the previous score and replace it with [7, -8].
+          "D" - To the record, add 2* -8 = -16, making the record [7, -8, -16].
+          "10" - Increase the record by one, making it [7, -8, -16, 10].
+          "+" - Make the record [7, -8, -16, 10, -6 ] by adding -16 + 10 = -6.
+          "+" - Make the record [7, -8, -16, 10, -6, 4] by adding 10+ -6 = 4.
+          7 + -8 + -16 + 10 + -6 + 4 = -9 is the total.
+      </p>`);
+
+      var array = [];
+      var result = 0;
+      for (let i = 0; i < 8; i++) {
+          let String = prompt("Enter value : ");
+          if(String === 'R') {
+              array.pop();
+          } else if(String === 'D') {
+              array.push(array[array.length - 1] * 2);
+          } else if(String === '+') {
+              array.push(array[array.length - 1] + array[array.length - 2])
+          } else {
+              array.push(String*1);
+          }
+      }
+
+      document.write(`<b>The array element : [${array}]</b> <br/>`);
+      console.log(array);
+      for (let index = 0; index < array.length; index++) {
+          result += array[index];
+      }
+      document.write(`<b>Sum of all elements : ${result}</b>`);
+      console.log(result)
     </script>
   </body>
 </html>
