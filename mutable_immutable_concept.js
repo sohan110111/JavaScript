@@ -20,3 +20,12 @@ randomProperties.name = "Akash"
 randomProperties.Function = function () { return "Daraz"}
 console.log(randomProperties.Function());
 console.log(randomProperties)
+
+// javaScript contains a single value
+const javaScriptObject = "Contain single value"
+console.log(typeof javaScriptObject);
+
+const x = person;
+x.age = 10;
+console.log(x); // x = person same
+console.log(person); // x = person same
