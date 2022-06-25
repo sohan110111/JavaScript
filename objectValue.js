@@ -21,3 +21,6 @@ for (x of personArray) {
     //console.log(personArray[x])
     console.log(x)
 }
+
+
+console.log(JSON.stringify(person))
